@@ -1,6 +1,216 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Azza_Task</groupId>
-  <artifactId>Azza_Task</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<!-- Copyright 2019 Greyskies. All Rights Reserved. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>automation</groupId>
+	<artifactId>AzzaTask</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>AzzaTask</name>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<aspectj.version>1.8.10</aspectj.version>
+
+	</properties>
+	<profiles>
+		<profile>
+			<id>AzzaTask</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-compiler-plugin</artifactId>
+							<configuration>
+								<source>1.8</source>
+								<target>1.8</target>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0-M3</version>
+							<configuration>
+								<systemPropertyVariables>
+									<hub.url>${hub.url}</hub.url>
+									<host>${host}</host>
+									<browser.name>${browser.name}</browser.name>
+									<environment>${environment}</environment>
+									<base.url>${base.url}</base.url>
+									<user.name>${user.name}</user.name>
+									<password>${password}</password>
+									<enable.har>${enable.har}</enable.har>
+									<enable.allureServer>${enable.allureServer}</enable.allureServer>
+									<dry.run>${dry.run}</dry.run>
+									<portability.url>${portability.url}</portability.url>
+									<allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+								</systemPropertyVariables>
+								<suiteXmlFiles>
+									<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
+								<argLine>
+									-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+								</argLine>
+								<properties><!-- --></properties>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+</properties>
+							</configuration>
+							<dependencies>
+								<dependency>
+									<groupId>org.aspectj</groupId>
+									<artifactId>aspectjweaver</artifactId>
+									<version>${aspectj.version}</version>
+								</dependency>
+							</dependencies>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+	<dependencies>
+		<!-- selenium dependencies -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.0.0-beta7</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sf/jargs -->
+		<!-- logging dependencies -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.13.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.testautomationguru.ocular</groupId>
+			<artifactId>ocular</artifactId>
+			<version>1.0.0.Alpha</version>
+		</dependency>
+		<dependency>
+			<groupId>org.arquillian.rusheye</groupId>
+			<artifactId>rusheye-impl</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+		<dependency>
+			<groupId>ru.yandex.qatools.ashot</groupId>
+			<artifactId>ashot</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>net.lightbody.bmp</groupId>
+			<artifactId>browsermob-core</artifactId>
+			<version>2.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.22</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/de.redsix/pdfcompare -->
+		<dependency>
+			<groupId>de.redsix</groupId>
+			<artifactId>pdfcompare</artifactId>
+			<version>1.1.54</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.55</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.13.8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20201115</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.4.1</version>
+		</dependency>
+	</dependencies>
 </project>
