@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="methods" name="Failed suite [AzzaTask]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="methods" name="testcase1(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="tests.testcase1Test">
         <methods>
@@ -11,5 +11,5 @@
         </methods>
       </class> <!-- tests.testcase1Test -->
     </classes>
-  </test> <!-- testcase1(failed) -->
-</suite> <!-- Failed suite [AzzaTask] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

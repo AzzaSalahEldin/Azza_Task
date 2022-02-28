@@ -1,8 +1,12 @@
 package base;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import java.io.IOException;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.DataProvider;
+
+import core.ExcelData;
 import core.coreClass;
 
 public class baseClass {
@@ -13,7 +17,7 @@ public class baseClass {
 		c = new coreClass(driver);
 	}
 
-	public void enterText(String text){
+	public void enterText(String text) {
 		c.enterText(text);
 	}
 
@@ -39,10 +43,22 @@ public class baseClass {
 
 	public void clickOnVedio(int num) {
 		c.clickOnVedio(num);
-		;
 	}
 
 	public void closeDriver() {
 		c.closeDriver();
+	}
+
+	@DataProvider(name = "azza")
+	public String excel(String sheetName, int row, int col) throws IOException, InvalidFormatException {
+		ExcelData objExcelFile = new ExcelData();
+		return objExcelFile.readExcel(sheetName, row, col);
+
+	}
+	public int getVedioNum(int i, int j) throws NumberFormatException, InvalidFormatException, IOException {
+		int indexOfDecimal = String.valueOf(Double.parseDouble(excel("Sheet1", i, j))).indexOf(".");
+		String value = String.valueOf(Double.parseDouble(excel("Sheet1", i,j))).substring(0, indexOfDecimal);
+		int num = Integer.parseInt(value);
+		return num;
 	}
 }

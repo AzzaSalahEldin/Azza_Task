@@ -8,6 +8,7 @@
           <include name="NewTest_BeforeClass"/>
           <include name="NewTest_AfterClass"/>
           <include name="case01"/>
+          <include name="case02"/>
         </methods>
       </class> <!-- tests.testcase1Test -->
     </classes>

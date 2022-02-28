@@ -1,103 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-28T13:04:50 EET" name="AzzaTask" finished-at="2022-02-28T13:04:51 EET" duration-ms="1259">
+  <suite started-at="2022-03-01T00:43:05 EET" name="Default suite" finished-at="2022-03-01T00:43:23 EET" duration-ms="17299">
     <groups>
     </groups>
-    <test started-at="2022-02-28T13:04:50 EET" name="testcase1" finished-at="2022-02-28T13:04:51 EET" duration-ms="1259">
+    <test started-at="2022-03-01T00:43:05 EET" name="Default test" finished-at="2022-03-01T00:43:23 EET" duration-ms="17299">
       <class name="tests.testcase1Test">
-        <test-method is-config="true" signature="NewTest_BeforeClass()[pri:0, instance:tests.testcase1Test@2654635]" started-at="2022-02-28T13:04:50 EET" name="NewTest_BeforeClass" finished-at="2022-02-28T13:04:51 EET" duration-ms="1086" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method is-config="true" signature="NewTest_BeforeClass()[pri:0, instance:tests.testcase1Test@736caf7a]" started-at="2022-03-01T00:43:05 EET" name="NewTest_BeforeClass" finished-at="2022-03-01T00:43:13 EET" duration-ms="7904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewTest_BeforeClass -->
+        <test-method signature="case01()[pri:0, instance:tests.testcase1Test@736caf7a]" started-at="2022-03-01T00:43:13 EET" name="case01" finished-at="2022-03-01T00:43:23 EET" duration-ms="9141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case01 -->
+        <test-method is-config="true" signature="NewTest_AfterClass()[pri:0, instance:tests.testcase1Test@736caf7a]" started-at="2022-03-01T00:43:23 EET" name="NewTest_AfterClass" finished-at="2022-03-01T00:43:23 EET" duration-ms="32" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[unknown error: failed to write prefs file
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=98.0.4758.102)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EIS0200', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-Ordinal0 [0x00F669A3+2582947]
-Ordinal0 [0x00EFA6D1+2139857]
-Ordinal0 [0x00DF3A98+1063576]
-Ordinal0 [0x00E121A8+1188264]
-Ordinal0 [0x00E122D5+1188565]
-Ordinal0 [0x00E0FB35+1178421]
-Ordinal0 [0x00E0C9E1+1165793]
-Ordinal0 [0x00E3CFFF+1363967]
-Ordinal0 [0x00E3CC2A+1362986]
-Ordinal0 [0x00E38366+1344358]
-Ordinal0 [0x00E15176+1200502]
-Ordinal0 [0x00E16066+1204326]
-GetHandleVerifier [0x0110BE02+1675858]
-GetHandleVerifier [0x011C036C+2414524]
-GetHandleVerifier [0x00FFBB01+560977]
-GetHandleVerifier [0x00FFA8D3+556323]
-Ordinal0 [0x00F0020E+2163214]
-Ordinal0 [0x00F05078+2183288]
-Ordinal0 [0x00F051C0+2183616]
-Ordinal0 [0x00F0EE1C+2223644]
-BaseThreadInitThunk [0x76C36359+25]
-RtlGetAppContainerNamedObjectPath [0x778287A4+228]
-RtlGetAppContainerNamedObjectPath [0x77828774+180]
-]]>
+System info: host: 'EIS0218', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\asalah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a6bb4081ec82f39089057dda0082f9c2]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: failed to write prefs file
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=98.0.4758.102)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EIS0200', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-Ordinal0 [0x00F669A3+2582947]
-Ordinal0 [0x00EFA6D1+2139857]
-Ordinal0 [0x00DF3A98+1063576]
-Ordinal0 [0x00E121A8+1188264]
-Ordinal0 [0x00E122D5+1188565]
-Ordinal0 [0x00E0FB35+1178421]
-Ordinal0 [0x00E0C9E1+1165793]
-Ordinal0 [0x00E3CFFF+1363967]
-Ordinal0 [0x00E3CC2A+1362986]
-Ordinal0 [0x00E38366+1344358]
-Ordinal0 [0x00E15176+1200502]
-Ordinal0 [0x00E16066+1204326]
-GetHandleVerifier [0x0110BE02+1675858]
-GetHandleVerifier [0x011C036C+2414524]
-GetHandleVerifier [0x00FFBB01+560977]
-GetHandleVerifier [0x00FFA8D3+556323]
-Ordinal0 [0x00F0020E+2163214]
-Ordinal0 [0x00F05078+2183288]
-Ordinal0 [0x00F051C0+2183616]
-Ordinal0 [0x00F0EE1C+2223644]
-BaseThreadInitThunk [0x76C36359+25]
-RtlGetAppContainerNamedObjectPath [0x778287A4+228]
-RtlGetAppContainerNamedObjectPath [0x77828774+180]
-
+System info: host: 'EIS0218', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\asalah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a6bb4081ec82f39089057dda0082f9c2
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at tests.testcase1Test.NewTest_BeforeClass(testcase1Test.java:27)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+at core.coreClass.closeDriver(coreClass.java:88)
+at base.baseClass.closeDriver(baseClass.java:49)
+at tests.testcase1Test.NewTest_AfterClass(testcase1Test.java:70)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,23 +61,37 @@ at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(Met
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
 at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
 at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_BeforeClass -->
+        </test-method> <!-- NewTest_AfterClass -->
       </class> <!-- tests.testcase1Test -->
-    </test> <!-- testcase1 -->
-  </suite> <!-- AzzaTask -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

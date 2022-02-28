@@ -1,19 +1,27 @@
 package core;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class coreClass {
 	WebDriver driver;
+	private WebDriverWait wait;
 
 	@FindBy(xpath = "//input[@name='search_query']")
 	WebElement searchField;
 
-	@FindBy(xpath = "//button[@aria-label='Search']")
+	@FindBy(xpath = "//button[contains(@id,'search-icon-legacy')]")
 	WebElement searchButton;
 
 	@FindBy(xpath = "//div[@id='filter-menu']//tp-yt-paper-button[@id='button']")
@@ -34,6 +42,7 @@ public class coreClass {
 	public coreClass(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(this.driver, 15);
 	}
 
 	public void enterText(String text) {
@@ -41,14 +50,23 @@ public class coreClass {
 	}
 
 	public void clickSearch() {
+		// wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(searchButton).click().build().perform();
 		searchButton.click();
+		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
 	}
 
 	public void clickFilterMenu() {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(filterMenu).click().build().perform();
 		filterMenu.click();
+		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
 	}
 
 	public void clickVedioButton() {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(vedioButton).click().build().perform();
 		vedioButton.click();
 	}
 
