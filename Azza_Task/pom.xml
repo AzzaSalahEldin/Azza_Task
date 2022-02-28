@@ -31,31 +31,13 @@
 							<artifactId>maven-surefire-plugin</artifactId>
 							<version>3.0.0-M3</version>
 							<configuration>
-								<systemPropertyVariables>
-									<hub.url>${hub.url}</hub.url>
-									<host>${host}</host>
-									<browser.name>${browser.name}</browser.name>
-									<environment>${environment}</environment>
-									<base.url>${base.url}</base.url>
-									<user.name>${user.name}</user.name>
-									<password>${password}</password>
-									<enable.har>${enable.har}</enable.har>
-									<enable.allureServer>${enable.allureServer}</enable.allureServer>
-									<dry.run>${dry.run}</dry.run>
-									<portability.url>${portability.url}</portability.url>
-									<allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-								</systemPropertyVariables>
+
 								<suiteXmlFiles>
-									<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+									<suiteXmlFile>./src/test/resources/testng.xml</suiteXmlFile>
 								</suiteXmlFiles>
-								<argLine>
-									-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-								</argLine>
-								<properties><!-- --></properties>
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-</properties>
+								<parallel>tests</parallel>
+								<threadCount>5</threadCount>
+
 							</configuration>
 							<dependencies>
 								<dependency>
@@ -82,7 +64,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.0.0-beta7</version>
-			<!-- <scope>test</scope> -->
+			<scope>compile</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/net.sf/jargs -->
 		<!-- logging dependencies -->
