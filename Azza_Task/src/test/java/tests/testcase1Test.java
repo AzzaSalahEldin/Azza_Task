@@ -40,7 +40,8 @@ public class testcase1Test {
 		base.clickVedioButton();
 		String expected = base.getVedioName(base.getVedioNum(1, 1) - 1);
 		base.clickOnVedio(base.getVedioNum(1, 1) - 1);
-		Assert.assertEquals(base.getVedioTitle(), expected);
+		String actual=base.getVedioTitle();
+		Assert.assertEquals(actual, expected);
 	}
 
 //	@Test

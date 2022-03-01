@@ -1,11 +1,16 @@
 package core;
 
+import static org.testng.Assert.assertEquals;
+
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,12 +22,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class coreClass {
 	WebDriver driver;
 	private WebDriverWait wait;
-
+	Actions actions;
 	@FindBy(xpath = "//input[@name='search_query']")
 	WebElement searchField;
 
-	@FindBy(xpath = "//button[contains(@id,'search-icon-legacy')]")
-	WebElement searchButton;
+//	@FindBy(xpath = "#search-icon-legacy.ytd-searchbox")
+//	WebElement searchButton;
 
 	@FindBy(xpath = "//div[@id='filter-menu']//tp-yt-paper-button[@id='button']")
 	WebElement filterMenu;
@@ -43,45 +48,41 @@ public class coreClass {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(this.driver, 15);
+		actions = new Actions(driver);
 	}
 
-	public void enterText(String text) {
+	public void enterText(String text) throws InterruptedException {
 		searchField.sendKeys(text);
+		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
 	}
 
 	public void clickSearch() {
-		// wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(searchButton).click().build().perform();
-		searchButton.click();
-		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+		driver.findElement(By.id("search-icon-legacy")).click();
 	}
 
 	public void clickFilterMenu() {
-		Actions actions = new Actions(driver);
 		actions.moveToElement(filterMenu).click().build().perform();
-		filterMenu.click();
-		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
 	}
 
 	public void clickVedioButton() {
-		Actions actions = new Actions(driver);
-		actions.moveToElement(vedioButton).click().build().perform();
 		vedioButton.click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
 	public String getVedioName(int num) {
-		String name = vedioName.get(num).getText();
-		return name;
+		return vedioName.get(num).getText();
 	}
 
 	public String getVedioTitle() {
-		String vedio_title = vedioTitle.getText();
-		return vedio_title;
+		wait.until(ExpectedConditions.visibilityOf(vedioTitle));
+		return vedioTitle.getText();
 	}
 
 	public void clickOnVedio(int num) {
-		vedioList.get(num).click();
+	wait.until(ExpectedConditions.visibilityOf(vedioList.get(num)));
+	vedioList.get(num).click();
 	}
 
 	public void closeDriver() {

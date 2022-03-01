@@ -17,11 +17,12 @@ public class baseClass {
 		c = new coreClass(driver);
 	}
 
-	public void enterText(String text) {
+	public void enterText(String text) throws InterruptedException {
 		c.enterText(text);
 	}
 
 	public void clickSearch() {
+		
 		c.clickSearch();
 	}
 
