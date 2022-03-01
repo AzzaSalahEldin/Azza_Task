@@ -3,12 +3,12 @@
 <suite parallel="tests" name="AzzaTask" thread-count="3" >
 	<test name="testcase1">
 		<classes>
-			<class name="tests.testcase1Test" />
+			<class name="tests.ScenarioTest" />
 		</classes>
 	</test>
 	<test name="testcase2">
 		<classes>
-			<class name="tests.testcase1Test2" />
+			<class name="tests.ScenarioTest2" />
 		</classes>
 	</test>
 </suite> 

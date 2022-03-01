@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-01T20:54:29 EET" name="AzzaTask" finished-at="2022-03-01T20:55:39 EET" duration-ms="69708">
+  <suite started-at="2022-03-02T01:24:26 EET" name="AzzaTask" finished-at="2022-03-02T01:25:17 EET" duration-ms="51246">
     <groups>
     </groups>
-    <test started-at="2022-03-01T20:54:29 EET" name="testcase2" finished-at="2022-03-01T20:55:18 EET" duration-ms="49157">
+    <test started-at="2022-03-02T01:24:26 EET" name="testcase2" finished-at="2022-03-02T01:25:08 EET" duration-ms="41598">
       <class name="tests.testcase1Test2">
-        <test-method is-config="true" signature="NewTest_BeforeClass()[pri:0, instance:tests.testcase1Test2@767e20cf]" started-at="2022-03-01T20:54:30 EET" name="NewTest_BeforeClass" finished-at="2022-03-01T20:55:04 EET" duration-ms="34015" status="PASS">
+        <test-method is-config="true" signature="testcase1Test2_BeforeMethod()[pri:0, instance:tests.testcase1Test2@17a1e4ca]" started-at="2022-03-02T01:24:27 EET" name="testcase1Test2_BeforeMethod" finished-at="2022-03-02T01:24:34 EET" duration-ms="7249" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_BeforeClass -->
-        <test-method signature="case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test2@767e20cf]" started-at="2022-03-01T20:55:04 EET" name="case01" data-provider="testdata" finished-at="2022-03-01T20:55:13 EET" duration-ms="9495" status="FAIL">
+        </test-method> <!-- testcase1Test2_BeforeMethod -->
+        <test-method signature="case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test2@17a1e4ca]" started-at="2022-03-02T01:24:34 EET" name="case01" data-provider="testdata" finished-at="2022-03-02T01:24:43 EET" duration-ms="8339" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,82 +24,29 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a id="thumbnail" class="yt-simple-endpoint inline-block style-scope ytd-thumbnail" aria-hidden="true" tabindex="-1" rel="null" href="/watch?v=u4RTcNrlpI8">...</a> is not clickable at point (180, 100). Other element would receive the click: <tp-yt-paper-item class="style-scope ytd-guide-entry-renderer" role="tab" tabindex="0" aria-disabled="false" aria-selected="false">...</tp-yt-paper-item>
-  (Session info: chrome=98.0.4758.102)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EIS0218', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\asalah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: af9205da3276163fd8d58038ccaec07a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a id="thumbnail" class="yt-simple-endpoint inline-block style-scope ytd-thumbnail" aria-hidden="true" tabindex="-1" rel="null" href="/watch?v=u4RTcNrlpI8">...</a> is not clickable at point (180, 100). Other element would receive the click: <tp-yt-paper-item class="style-scope ytd-guide-entry-renderer" role="tab" tabindex="0" aria-disabled="false" aria-selected="false">...</tp-yt-paper-item>
-  (Session info: chrome=98.0.4758.102)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EIS0218', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\asalah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: af9205da3276163fd8d58038ccaec07a
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at core.coreClass.clickOnVedio(coreClass.java:79)
-at base.baseClass.clickOnVedio(baseClass.java:45)
-at tests.testcase1Test2.case01(testcase1Test2.java:42)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case01 -->
-        <test-method is-config="true" signature="NewTest_AfterClass()[pri:0, instance:tests.testcase1Test2@767e20cf]" started-at="2022-03-01T20:55:13 EET" name="NewTest_AfterClass" finished-at="2022-03-01T20:55:18 EET" duration-ms="4923" status="PASS">
+        <test-method is-config="true" signature="testcase1Test2_AfterMethod(org.testng.ITestResult)[pri:0, instance:tests.testcase1Test2@17a1e4ca]" started-at="2022-03-02T01:24:43 EET" name="testcase1Test2_AfterMethod" finished-at="2022-03-02T01:25:08 EET" duration-ms="24713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=case01 status=SUCCESS method=testcase1Test2.case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test2@17a1e4ca] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_AfterClass -->
+        </test-method> <!-- testcase1Test2_AfterMethod -->
       </class> <!-- tests.testcase1Test2 -->
     </test> <!-- testcase2 -->
-    <test started-at="2022-03-01T20:54:29 EET" name="testcase1" finished-at="2022-03-01T20:55:39 EET" duration-ms="69708">
+    <test started-at="2022-03-02T01:24:26 EET" name="testcase1" finished-at="2022-03-02T01:25:17 EET" duration-ms="51246">
       <class name="tests.testcase1Test">
-        <test-method is-config="true" signature="NewTest_BeforeClass()[pri:0, instance:tests.testcase1Test@635572a7]" started-at="2022-03-01T20:54:30 EET" name="NewTest_BeforeClass" finished-at="2022-03-01T20:55:02 EET" duration-ms="32467" status="PASS">
+        <test-method is-config="true" signature="testcase1Test_BeforeMethod()[pri:0, instance:tests.testcase1Test@79d94571]" started-at="2022-03-02T01:24:27 EET" name="testcase1Test_BeforeMethod" finished-at="2022-03-02T01:24:34 EET" duration-ms="7589" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_BeforeClass -->
-        <test-method signature="case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test@635572a7]" started-at="2022-03-01T20:55:02 EET" name="case01" data-provider="testdata" finished-at="2022-03-01T20:55:14 EET" duration-ms="12090" status="PASS">
+        </test-method> <!-- testcase1Test_BeforeMethod -->
+        <test-method signature="case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test@79d94571]" started-at="2022-03-02T01:24:34 EET" name="case01" data-provider="testdata" finished-at="2022-03-02T01:24:45 EET" duration-ms="10582" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -115,15 +62,22 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case01 -->
-        <test-method is-config="true" signature="NewTest_AfterClass()[pri:0, instance:tests.testcase1Test@635572a7]" started-at="2022-03-01T20:55:14 EET" name="NewTest_AfterClass" finished-at="2022-03-01T20:55:15 EET" duration-ms="714" status="PASS">
+        <test-method is-config="true" signature="testcase1Test_AfterMethod(org.testng.ITestResult)[pri:0, instance:tests.testcase1Test@79d94571]" started-at="2022-03-02T01:24:45 EET" name="testcase1Test_AfterMethod" finished-at="2022-03-02T01:24:52 EET" duration-ms="6829" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=case01 status=SUCCESS method=testcase1Test.case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test@79d94571] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_AfterClass -->
-        <test-method is-config="true" signature="NewTest_BeforeClass()[pri:0, instance:tests.testcase1Test@635572a7]" started-at="2022-03-01T20:55:15 EET" name="NewTest_BeforeClass" finished-at="2022-03-01T20:55:28 EET" duration-ms="13266" status="PASS">
+        </test-method> <!-- testcase1Test_AfterMethod -->
+        <test-method is-config="true" signature="testcase1Test_BeforeMethod()[pri:0, instance:tests.testcase1Test@79d94571]" started-at="2022-03-02T01:24:52 EET" name="testcase1Test_BeforeMethod" finished-at="2022-03-02T01:25:05 EET" duration-ms="12603" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_BeforeClass -->
-        <test-method signature="case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test@635572a7]" started-at="2022-03-01T20:55:28 EET" name="case01" data-provider="testdata" finished-at="2022-03-01T20:55:38 EET" duration-ms="9831" status="PASS">
+        </test-method> <!-- testcase1Test_BeforeMethod -->
+        <test-method signature="case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test@79d94571]" started-at="2022-03-02T01:25:05 EET" name="case01" data-provider="testdata" finished-at="2022-03-02T01:25:11 EET" duration-ms="6286" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -139,10 +93,17 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case01 -->
-        <test-method is-config="true" signature="NewTest_AfterClass()[pri:0, instance:tests.testcase1Test@635572a7]" started-at="2022-03-01T20:55:38 EET" name="NewTest_AfterClass" finished-at="2022-03-01T20:55:39 EET" duration-ms="474" status="PASS">
+        <test-method is-config="true" signature="testcase1Test_AfterMethod(org.testng.ITestResult)[pri:0, instance:tests.testcase1Test@79d94571]" started-at="2022-03-02T01:25:11 EET" name="testcase1Test_AfterMethod" finished-at="2022-03-02T01:25:17 EET" duration-ms="6423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=case01 status=SUCCESS method=testcase1Test.case01(java.lang.String,java.lang.String)[pri:0, instance:tests.testcase1Test@79d94571] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTest_AfterClass -->
+        </test-method> <!-- testcase1Test_AfterMethod -->
       </class> <!-- tests.testcase1Test -->
     </test> <!-- testcase1 -->
   </suite> <!-- AzzaTask -->

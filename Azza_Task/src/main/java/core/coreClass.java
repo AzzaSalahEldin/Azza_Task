@@ -1,6 +1,5 @@
 package core;
 
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -20,9 +19,6 @@ public class coreClass {
 	@FindBy(xpath = "//input[@name='search_query']")
 	WebElement searchField;
 
-//	@FindBy(xpath = "#search-icon-legacy.ytd-searchbox")
-//	WebElement searchButton;
-
 	@FindBy(xpath = "//div[@id='filter-menu']//tp-yt-paper-button[@id='button']")
 	WebElement filterMenu;
 
@@ -35,13 +31,13 @@ public class coreClass {
 	@FindBy(xpath = "//ytd-video-renderer[@class='style-scope ytd-item-section-renderer']//div[@id='title-wrapper']//yt-formatted-string[@class='style-scope ytd-video-renderer']")
 	List<WebElement> vedioName;
 
-	@FindBy(xpath = "//div[@id='info']//div[@id='container']//h1//yt-formatted-string[contains(@class,'ytd-video-primary-info-renderer')]")
+	@FindBy(xpath = "//div[@id='info-contents']//div[@id='container']//h1//yt-formatted-string[contains(@class,'ytd-video-primary-info-renderer')]")
 	WebElement vedioTitle;
 
 	public coreClass(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(this.driver, 15);
+		wait = new WebDriverWait(this.driver, 200);
 		actions = new Actions(driver);
 	}
 
@@ -70,13 +66,12 @@ public class coreClass {
 	}
 
 	public String getVedioTitle() {
-		wait.until(ExpectedConditions.visibilityOf(vedioTitle));
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(vedioTitle)));
 		return vedioTitle.getText();
 	}
 
 	public void clickOnVedio(int num) {
-	wait.until(ExpectedConditions.visibilityOf(vedioList.get(num)));
-	vedioList.get(num).click();
+		actions.moveToElement(vedioList.get(num)).click().build().perform();
 	}
 
 	public void closeDriver() {

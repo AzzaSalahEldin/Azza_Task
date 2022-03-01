@@ -9,8 +9,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class setUpEnv {
+	WebDriver driver;
+	
 	public WebDriver openChromeBrowser(String URL) {
-		WebDriver driver;
 		ChromeOptions chromeOptions = new ChromeOptions();
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(chromeOptions);
@@ -20,7 +21,6 @@ public class setUpEnv {
 	}
 
 	public WebDriver openFirefoxBrowser(String URL) {
-		WebDriver driver;
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		WebDriverManager.chromedriver().setup();
 		driver = new FirefoxDriver(firefoxOptions);

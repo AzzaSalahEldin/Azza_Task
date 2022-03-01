@@ -8,45 +8,48 @@ import org.testng.annotations.DataProvider;
 
 import core.ExcelData;
 import core.coreClass;
+import core.setUpEnv;
 
 public class baseClass {
 
-	coreClass c;
+	coreClass core;
+	setUpEnv setup;
 
 	public baseClass(WebDriver driver) {
-		c = new coreClass(driver);
+		core = new coreClass(driver);
+		setup = new setUpEnv();
 	}
 
 	public void enterText(String text) throws InterruptedException {
-		c.enterText(text);
+		core.enterText(text);
 	}
 
 	public void clickSearch() {
-		c.clickSearch();
+		core.clickSearch();
 	}
 
 	public void clickFilterMenu() {
-		c.clickFilterMenu();
+		core.clickFilterMenu();
 	}
 
 	public void clickVedioButton() {
-		c.clickVedioButton();
+		core.clickVedioButton();
 	}
 
 	public String getVedioName(int num) {
-		return c.getVedioName(num);
+		return core.getVedioName(num);
 	}
 
 	public String getVedioTitle() {
-		return c.getVedioTitle();
+		return core.getVedioTitle();
 	}
 
 	public void clickOnVedio(int num) {
-		c.clickOnVedio(num);
+		core.clickOnVedio(num);
 	}
 
 	public void closeDriver() {
-		c.closeDriver();
+		core.closeDriver();
 	}
 
 	public int getVedioNum(String numval) throws NumberFormatException, InvalidFormatException, IOException {
@@ -55,17 +58,20 @@ public class baseClass {
 		int num = Integer.parseInt(value);
 		return num;
 	}
+
 	@DataProvider(name = "testdata")
-	public Object[][] readFromExcelBySheet(String filePath,String sheetName) throws IOException, InvalidFormatException {
+	public Object[][] readFromExcelBySheet(String filePath, String sheetName)
+			throws IOException, InvalidFormatException {
 		ExcelData objExcelFile = new ExcelData();
-		return objExcelFile.readFromExcelBySheet(filePath,sheetName);
+		return objExcelFile.readFromExcelBySheet(filePath, sheetName);
 
 	}
+
 	@DataProvider(name = "testdata2")
 	public String readFromExcelByIndex(String sheetName, int row, int col) throws IOException, InvalidFormatException {
 		ExcelData objExcelFile = new ExcelData();
 		return objExcelFile.readFromExcelByIndex(sheetName, row, col);
 
 	}
-	
+
 }

@@ -6,7 +6,7 @@
       <class name="tests.testcase1Test2">
         <methods>
           <include name="NewTest_BeforeClass"/>
-          <include name="case01" invocation-numbers="0"/>
+          <include name="case01"/>
           <include name="NewTest_AfterClass"/>
         </methods>
       </class> <!-- tests.testcase1Test2 -->
