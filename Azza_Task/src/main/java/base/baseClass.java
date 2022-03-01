@@ -22,7 +22,6 @@ public class baseClass {
 	}
 
 	public void clickSearch() {
-		
 		c.clickSearch();
 	}
 
@@ -50,16 +49,23 @@ public class baseClass {
 		c.closeDriver();
 	}
 
-	@DataProvider(name = "azza")
-	public String excel(String sheetName, int row, int col) throws IOException, InvalidFormatException {
-		ExcelData objExcelFile = new ExcelData();
-		return objExcelFile.readExcel(sheetName, row, col);
-
-	}
-	public int getVedioNum(int i, int j) throws NumberFormatException, InvalidFormatException, IOException {
-		int indexOfDecimal = String.valueOf(Double.parseDouble(excel("Sheet1", i, j))).indexOf(".");
-		String value = String.valueOf(Double.parseDouble(excel("Sheet1", i,j))).substring(0, indexOfDecimal);
+	public int getVedioNum(String numval) throws NumberFormatException, InvalidFormatException, IOException {
+		int indexOfDecimal = String.valueOf(Double.parseDouble(numval)).indexOf(".");
+		String value = String.valueOf(Double.parseDouble(numval)).substring(0, indexOfDecimal);
 		int num = Integer.parseInt(value);
 		return num;
 	}
+	@DataProvider(name = "testdata")
+	public Object[][] readFromExcelBySheet(String filePath,String sheetName) throws IOException, InvalidFormatException {
+		ExcelData objExcelFile = new ExcelData();
+		return objExcelFile.readFromExcelBySheet(filePath,sheetName);
+
+	}
+	@DataProvider(name = "testdata2")
+	public String readFromExcelByIndex(String sheetName, int row, int col) throws IOException, InvalidFormatException {
+		ExcelData objExcelFile = new ExcelData();
+		return objExcelFile.readFromExcelByIndex(sheetName, row, col);
+
+	}
+	
 }
